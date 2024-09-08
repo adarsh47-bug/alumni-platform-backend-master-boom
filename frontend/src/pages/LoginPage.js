@@ -1,7 +1,7 @@
 // frontend/src/pages/LoginPage.js
 
 import React, { useState, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/authContext';
 
@@ -10,7 +10,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { login } = useContext(AuthContext);
 
   const submitHandler = async (e) => {
@@ -18,7 +18,7 @@ const LoginPage = () => {
     try {
       const { data } = await axios.post('/api/users/login', { email, password });
       login(data);
-      navigate('/');
+      window.location.href = '/';
     } catch (err) {
       setError('Invalid email or password');
     }

@@ -166,7 +166,7 @@ const CreateGroupForm = ({ onCreate, onClose }) => {
 const AlumniList = ({ alumni, isConnectedTab, onConnect }) => {
   return alumni.length > 0 ? (
     <ul className="flex flex-wrap">
-      {alumni.map((alumnus, index) => (
+      {[...alumni].map((alumnus, index) => (
         <li key={index} className="m-2">
           <ConnectCard
             name={alumnus.name}
@@ -279,6 +279,46 @@ const initialAlumniData = {
       profileImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=faces&fit=crop&w=400&h=400',
       userId: '2'
     },
+    {
+      "name": "John Doe",
+      "graduationYear": 2015,
+      "degree": "BSc in Computer Science",
+      "currentPosition": "Software Engineer at Google",
+      "location": "Mountain View, CA",
+      "contact": "john.doe@gmail.com",
+      "profileImage": "https://images.unsplash.com/photo-1502767089025-6572583495b9?crop=faces&fit=crop&w=400&h=400",
+      "userId": "6",
+    },
+    {
+      "name": "Emily Johnson",
+      "graduationYear": 2017,
+      "degree": "MBA in Finance",
+      "currentPosition": "Financial Analyst at Goldman Sachs",
+      "location": "New York, NY",
+      "contact": "emily.johnson@gmail.com",
+      "profileImage": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=faces&fit=crop&w=400&h=400",
+      "userId": "3"
+    },
+    {
+      "name": "Michael Brown",
+      "graduationYear": 2018,
+      "degree": "BA in Graphic Design",
+      "currentPosition": "Creative Director at Adobe",
+      "location": "San Francisco, CA",
+      "contact": "michael.brown@gmail.com",
+      "profileImage": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=faces&fit=crop&w=400&h=400",
+      "userId": "4"
+    },
+    {
+      "name": "Sophia Davis",
+      "graduationYear": 2019,
+      "degree": "BSc in Data Science",
+      "currentPosition": "Data Scientist at Amazon",
+      "location": "Seattle, WA",
+      "contact": "sophia.davis@gmail.com",
+      "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=400&h=400",
+      "userId": "5"
+    }
   ],
   'My connections': [],
 };
@@ -405,7 +445,7 @@ const ConnectPage = () => {
         {activeTab === 'Explore Groups' && (
           <div>
             <ul className="flex flex-wrap">
-              {groups.map((group, index) => (
+              {[...groups, ...groups, ...groups, ...groups, ...groups,].map((group, index) => (
                 <li key={index} className="m-2">
                   <GroupCard group={group} onJoin={handleJoinGroup} isJoined={joinedGroups.includes(group)} />
                 </li>

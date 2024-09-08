@@ -1,5 +1,5 @@
 // src/components/Header.js
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Disclosure, Menu } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -41,8 +41,30 @@ const Header = () => {
     setActiveTab(href);
   };
 
+  const [profile, setProfile] = useState({});
+  const { user } = useContext(AuthContext);
+  console.log(profile);
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        if (!token) throw new Error('No token found');
+        const config = {
+          headers: { Authorization: `Bearer ${token}` },
+        };
+        const { data } = await axios.get('/api/users/profile', config);
+        // console.log('Fetched profile data:', data); // Log fetched data
+        setProfile(data);
+      } catch (error) {
+        console.error('Error fetching profile data:', error);
+      }
+    };
+
+    fetchProfile();
+  }, [user]);
+
   return (
-    <Disclosure as="nav" className="bg-[#350c35ef] fixed w-[100vw] shadow-lg z-10">
+    <Disclosure as="nav" className="bg-[#350c35ef] fixed w-[100vw] shadow-lg z-10 top-0">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -85,7 +107,7 @@ const Header = () => {
                 <span className="sr-only">Open user menu</span>
                 <img
                   className="h-8 w-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src={user ? user.profileImg : "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?w=740&t=st=1725699415~exp=1725700015~hmac=04feb55fd8848c29e1fd50fe7f67686ef34ea6bf5b89e8a9d2a8ce02688f1173"}
                   alt="User"
                 />
               </Menu.Button>

@@ -345,7 +345,15 @@ const IntroPage = () => {
       {/* Divider */}
       <div className="flex items-center mt-[8%]">
         <span className="h-px flex-1 bg-black"></span>
-        <span className="shrink-0 px-6">Lorem, ipsum dolor</span>
+        <span className="shrink-0 px-6">
+          <div className="flex items-center">
+            <span className="text-yellow-500 text-4xl">&#9733;</span>
+            <span className="text-yellow-500 text-4xl">&#9733;</span>
+            <span className="text-yellow-500 text-4xl">&#9733;</span>
+            <span className="text-yellow-500 text-4xl">&#9733;</span>
+            <span className="text-yellow-500 text-4xl">&#9733;</span>
+          </div>
+        </span>
         <span className="h-px flex-1 bg-black"></span>
       </div>
 
