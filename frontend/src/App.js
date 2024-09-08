@@ -25,6 +25,9 @@ import EventDetailsPage from './pages/EventDetailsPage';
 import ScrollToTop from './components/ScrollToTop';
 import IntroPage from './pages/IntroPage';
 
+import CareerAssistanceAI from './aimodels/CareerAssistanceAI';
+import LearnWithMeAI from './aimodels/LearnWithMeAI';
+
 const App = () => {
   return (
     <AuthProvider>
@@ -53,6 +56,10 @@ const App = () => {
           <Route path="/profile/:userId" element={<CombinedRoute element={ViewProfilePage} isPrivate={true} />} />
           <Route path="/" element={<CombinedRoute element={IntroPage} isPrivate={false} />} />
           <Route path="*" element={<h1>Not Found</h1>} />
+
+          <Route path="/careerai" element={<CombinedRoute element={CareerAssistanceAI} isPrivate={true} />} />
+          <Route path="/learnai" element={<CombinedRoute element={LearnWithMeAI} isPrivate={true} />} />
+
 
         </Routes>
       </div>

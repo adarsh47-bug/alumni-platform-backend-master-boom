@@ -33,76 +33,63 @@ const dummyProfileData = {
     },
   },
   '3': {
-    name: 'Alice Johnson',
-    graduationYear: 2020,
-    degree: 'M.S. in Data Science',
-    currentPosition: 'Data Analyst at Amazon',
-    location: 'Seattle, WA',
-    contact: 'alice.johnson@gmail.com',
+    name: "Emily Johnson",
+    graduationYear: 2017,
+    degree: "MBA in Finance",
+    currentPosition: "Financial Analyst at Goldman Sachs",
+    location: "New York, NY",
+    contact: "emily.johnson@gmail.com",
+    profileImage: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=faces&fit=crop&w=400&h=400",
     bio: 'Experienced marketing manager driving campaigns for global outreach at Facebook. Specializing in digital marketing and consumer behavior.',
-    profileImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=faces&fit=crop&w=400&h=400',
     additionalInfo: {
       Hobbies: 'Photography, Traveling',
       LinkedIn: 'https://linkedin.com/in/janesmith',
     },
   },
   '4': {
-    name: 'Bob Brown',
+    name: "Michael Brown",
+    graduationYear: 2018,
+    degree: "BA in Graphic Design",
+    currentPosition: "Creative Director at Adobe",
+    location: "San Francisco, CA",
+    contact: "michael.brown@gmail.com",
+    profileImage: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=faces&fit=crop&w=400&h=400",
+    bio: "Software engineer with a passion for building scalable applications. Experienced in cloud computing and DevOps.",
+    additionalInfo: {
+      Hobbies: "Gaming, Cooking",
+      LinkedIn: "https://linkedin.com/in/michaelbrown"
+    }
+  },
+  '5': {
+    name: "Sophia Davis",
     graduationYear: 2019,
-    degree: 'MBA in Finance',
-    currentPosition: 'Financial Analyst at Goldman Sachs',
-    location: 'New York, NY',
-    contact: 'bob@bob.com',
-    bio: 'Experienced financial analyst working on Wall Street. Specializing in investment banking and financial modeling.',
-    profileImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=faces&fit=crop&w=400&h=400',
+    degree: "BSc in Data Science",
+    currentPosition: "Data Scientist at Amazon",
+    location: "Seattle, WA",
+    contact: "sophia.davis@gmail.com",
+    profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=400&h=400",
+    bio: "Data scientist with a focus on machine learning and predictive analytics. Passionate about solving complex business problems with data-driven solutions.",
     additionalInfo: {
-      Hobbies: 'Photography, Traveling',
-      LinkedIn: 'https://linkedin.com/in/janesmith',
-    },
+      Hobbies: "Hiking, Painting",
+      LinkedIn: "https://linkedin.com/in/sophiadavis"
+    }
   },
-  "5": {
-    name: "Sara Johnson",
-    graduationYear: 2017,
-    degree: "B.Tech in Computer Science",
-    currentPosition: "Software Engineer at Microsoft",
-    location: "Redmond, WA",
-    contact: "sara@sara.com",
-    bio: "Experienced software engineer working on Windows development at Microsoft. Passionate about cloud computing and AI.",
-    profileImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=faces&fit=crop&w=400&h=400",
-    additionalInfo: {
-      Hobbies: "Coding, Hiking, Reading",
-      LinkedIn: "https://linkedin.com/in/johndoe",
-    },
-  },
-  "6": {
-    name: "Chris Lee",
+  '6': {
+    name: "William Wilson",
     graduationYear: 2015,
-    degree: "BBA in Marketing",
-    currentPosition: "Marketing Manager at Google",
-    location: "Mountain View, CA",
-    contact: "chris@c.com",
-    bio: "Experienced marketing manager driving campaigns for global outreach at Google. Specializing in digital marketing and consumer behavior.",
-    profileImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=faces&fit=crop&w=400&h=400",
+    degree: "PhD in Physics",
+    currentPosition: "Research Scientist at NASA",
+    location: "Houston, TX",
+    contact: "will@i.am",
+    profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=400&h=400",
+    bio: "Research scientist working on space exploration and astrophysics projects at NASA. Specializing in planetary science and space missions.",
     additionalInfo: {
-      Hobbies: "Photography, Traveling",
-      LinkedIn: "https://linkedin.com/in/janesmith",
-    },
-  },
-  "7": {
-    name: "Alex Brown",
-    graduationYear: 2021,
-    degree: "M.S. in Data Science",
-    currentPosition: "Data Analyst at Facebook",
-    location: "Menlo Park, CA",
-    contact: "alex@a.com",
-    bio: "Experienced data analyst working on user data at Facebook. Specializing in data visualization and machine learning.",
-    profileImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=faces&fit=crop&w=400&h=400",
-    additionalInfo: {
-      Hobbies: "Photography, Traveling",
-      LinkedIn: "https://linkedin.com/in/janesmith",
-    },
+      Hobbies: "Stargazing, Chess",
+      LinkedIn: "https://linkedin.com/in/williamwilson"
+    }
   },
 };
+
 
 
 const ViewProfilePage = () => {

@@ -5,6 +5,7 @@ import FeedCard from '../components/FeedCard';
 import CreatePostForm from '../components/CreatePostForm';
 import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
+import { FaRobot, FaStar } from 'react-icons/fa';
 
 const Feed = () => {
   const [posts, setPosts] = useState([
@@ -202,6 +203,24 @@ const Feed = () => {
             <Link to="/events" className="block h-full rounded-lg my-1 border border-gray-700 p-4 hover:border-pink-600">
               <strong className="font-medium text-white">My Events</strong>
             </Link>
+          </li>
+          <li>
+            <a href='/careerai' className="block h-full rounded-lg my-1 border border-gray-700 p-4 hover:border-pink-600">
+              <strong className="font-medium text-white">Career guidance AI
+                <FaRobot className="text-green-400 inline-block mx-2 size-6" />
+
+              </strong>
+            </a>
+          </li>
+          <li>
+            <a href="/learnai" className="block h-full rounded-lg my-1 border border-gray-700 p-4 hover:border-pink-600">
+              <strong className="font-medium text-white">
+                Learn with AI
+                <span className="ml-2">
+                  <FaStar className="text-yellow-400 inline-block mx-2 size-5" />
+                </span>
+              </strong>
+            </a>
           </li>
           <li>
             <Link to="/logout" onClick={handleLogout} className="md:hidden block h-full rounded-lg my-1 border border-gray-700 p-4 hover:border-pink-600">

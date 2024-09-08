@@ -280,16 +280,6 @@ const initialAlumniData = {
       userId: '2'
     },
     {
-      "name": "John Doe",
-      "graduationYear": 2015,
-      "degree": "BSc in Computer Science",
-      "currentPosition": "Software Engineer at Google",
-      "location": "Mountain View, CA",
-      "contact": "john.doe@gmail.com",
-      "profileImage": "https://images.unsplash.com/photo-1502767089025-6572583495b9?crop=faces&fit=crop&w=400&h=400",
-      "userId": "6",
-    },
-    {
       "name": "Emily Johnson",
       "graduationYear": 2017,
       "degree": "MBA in Finance",
@@ -318,6 +308,16 @@ const initialAlumniData = {
       "contact": "sophia.davis@gmail.com",
       "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=400&h=400",
       "userId": "5"
+    },
+    {
+      "name": "William Wilson",
+      "graduationYear": 2015,
+      "degree": "PhD in Physics",
+      "currentPosition": "Research Scientist at NASA",
+      "location": "Houston, TX",
+      "contact": "will@i.am",
+      "profileImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=400&h=400",
+      "userId": "6"
     }
   ],
   'My connections': [],
