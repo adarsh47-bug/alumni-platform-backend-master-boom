@@ -32,7 +32,7 @@ const ConnectCard = ({ name, graduationYear, degree, currentPosition, location, 
 
         <a
           className="mt-2 inline-block w-full rounded-lg bg-gray-50 px-5 py-3 text-center text-sm font-semibold text-gray-500 sm:mt-0 sm:w-auto"
-          href="#"
+          href="/home"
         >
           View Profile
         </a>

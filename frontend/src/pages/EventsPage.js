@@ -91,7 +91,8 @@ const EventsData = [
 
 const EventsPage = () => {
   const [activeCategory, setActiveCategory] = useState('All Events');
-  const [events, setEvents] = useState(EventsData);
+  // const [events, setEvents] = useState(EventsData);
+  const [events] = useState(EventsData);
   const navigate = useNavigate();  // useNavigate for navigation
 
   const handleCategoryClick = (category) => {

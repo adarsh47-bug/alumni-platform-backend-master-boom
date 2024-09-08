@@ -90,6 +90,7 @@ const Feed = () => {
   const [profile, setProfile] = useState({});
   const { user } = useContext(AuthContext);
 
+  console.log(profile);
   useEffect(() => {
     const fetchProfile = async () => {
       try {
