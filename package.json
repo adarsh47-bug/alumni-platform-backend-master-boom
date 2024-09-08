@@ -4,9 +4,9 @@
   "description": "A backend service for the alumni platform",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "your-build-command",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run start --prefix backend\" \"npm run start --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "postinstall": "cd frontend && npm install && npm run build && cd ../backend && npm install"
   },
   "keywords": [
     "alumni",

@@ -1,5 +1,7 @@
 {
   "cSpell.words": [
     "addjob"
-  ]
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/8d659b5c-bcf8-42b2-8f32-14c2b41bf870/resourceGroups/alumnetrajasthan_group/providers/Microsoft.Web/sites/alumnetrajasthan",
+  "appService.deploySubpath": "."
 }
