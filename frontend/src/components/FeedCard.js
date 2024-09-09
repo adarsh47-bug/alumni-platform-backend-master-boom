@@ -16,13 +16,35 @@ const FeedCard = ({ post }) => {
         </div>
       </div>
       <div className="mt-4">
-        <p>{post.content}</p>
-        {post.media && (
-          <img
-            src={post.media}
-            alt="Post media"
-            className={`w-full mt-4 rounded-lg ${post.size}`}
-          />
+        {post.type === 'media' && (
+          <>
+            <p>{post.content}</p>
+            {post.media && (
+              <img
+                src={post.media}
+                alt="Post media"
+                className={`w-full mt-4 rounded-lg ${post.size}`}
+              />
+            )}
+          </>
+        )}
+        {post.type === 'article' && (
+          <>
+            <h3 className="text-lg font-semibold">{post.title}</h3>
+            <p>{post.content}</p>
+            <a href={post.link} className="text-blue-500 hover:underline">
+              Read more
+            </a>
+          </>
+        )}
+        {post.type === 'discussion' && (
+          <>
+            <h3 className="text-lg font-semibold">{post.title}</h3>
+            <p>{post.content}</p>
+            <button className="text-blue-500 hover:underline">
+              Join the discussion
+            </button>
+          </>
         )}
       </div>
       <div className="mt-4 flex justify-between text-gray-600">

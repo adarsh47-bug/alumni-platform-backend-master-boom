@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Wrapper from '../components/Wrapper'; // Reusable Wrapper for layout
 import FilterSidebar from '../components/FilterSidebar'; // Sidebar component for filtering jobs
 import JobCard from '../components/jobCard'; // Card component for each job listing
@@ -52,7 +52,8 @@ const dummyJobs = [
 ];
 
 const JobsPage = () => {
-  const [jobs, setJobs] = useState(dummyJobs); // Jobs state, initialized with dummy data
+  // const [jobs, setJobs] = useState(dummyJobs); // Jobs state, initialized with dummy data
+  const [jobs] = useState(dummyJobs); // Jobs state, initialized with dummy data
   const [filteredJobs, setFilteredJobs] = useState(jobs); // State for filtered jobs
   const [filters, setFilters] = useState({ location: '', type: '' }); // State for filters
 

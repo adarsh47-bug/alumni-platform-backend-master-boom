@@ -5,14 +5,16 @@ import FeedCard from '../components/FeedCard';
 import CreatePostForm from '../components/CreatePostForm';
 import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
+import { FaRobot, FaStar } from 'react-icons/fa';
 
 const Feed = () => {
   const [posts, setPosts] = useState([
     {
       id: 1,
+      type: 'media',
       author: {
         name: 'John Doe',
-        avatar: 'https://via.placeholder.com/40',
+        avatar: 'https://images.unsplash.com/photo-1560807707-8cc77767d783',
       },
       content: 'Just had an amazing meeting with the team!',
       media: 'https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -20,16 +22,60 @@ const Feed = () => {
       timestamp: '2h ago',
     },
     {
+      id: 5,
+      type: 'discussion',
+      author: {
+        name: 'Sarah Johnson',
+        avatar: 'https://images.unsplash.com/photo-1560807707-8cc77767d783',
+      },
+      content: 'What are your favorite programming languages?',
+      timestamp: '1d ago',
+    },
+    {
+      id: 3,
+      type: 'discussion',
+      author: {
+        name: 'Alice Johnson',
+        avatar: 'https://images.unsplash.com/photo-1560807707-8cc77767d783',
+      },
+      content: 'What are your thoughts on the latest industry trends?',
+      timestamp: '10h ago',
+    },
+    {
+      id: 4,
+      type: 'article',
+      author: {
+        name: 'Bob Smith',
+        avatar: 'https://images.unsplash.com/photo-1560807707-8cc77767d783',
+      },
+      title: 'The Benefits of Continuous Integration',
+      description: 'Learn about the advantages of implementing continuous integration in your development workflow.',
+      timestamp: '1d ago',
+    },
+    {
       id: 2,
+      type: 'media',
       author: {
         name: 'Jane Smith',
-        avatar: 'https://via.placeholder.com/40',
+        avatar: 'https://images.unsplash.com/photo-1560807707-8cc77767d783',
       },
       content: 'Excited to announce our new project.',
       media: 'https://images.unsplash.com/photo-1719937051058-63705ed35502?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       timestamp: '5h ago',
     },
+    {
+      id: 6,
+      type: 'article',
+      author: {
+        name: 'Michael Smith',
+        avatar: 'https://images.unsplash.com/photo-1560807707-8cc77767d783',
+      },
+      title: '10 Tips for Writing Clean Code',
+      description: 'Learn best practices for writing clean and maintainable code.',
+      timestamp: '2d ago',
+    }
   ]);
+
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const popupRef = useRef(null);
 
@@ -90,6 +136,7 @@ const Feed = () => {
   const [profile, setProfile] = useState({});
   const { user } = useContext(AuthContext);
 
+  console.log(profile);
   useEffect(() => {
     const fetchProfile = async () => {
       try {
@@ -156,6 +203,24 @@ const Feed = () => {
             <Link to="/events" className="block h-full rounded-lg my-1 border border-gray-700 p-4 hover:border-pink-600">
               <strong className="font-medium text-white">My Events</strong>
             </Link>
+          </li>
+          <li>
+            <a href='/careerai' className="block h-full rounded-lg my-1 border border-gray-700 p-4 hover:border-pink-600">
+              <strong className="font-medium text-white">Career guidance AI
+                <FaRobot className="text-green-400 inline-block mx-2 size-6" />
+
+              </strong>
+            </a>
+          </li>
+          <li>
+            <a href="/learnai" className="block h-full rounded-lg my-1 border border-gray-700 p-4 hover:border-pink-600">
+              <strong className="font-medium text-white">
+                Learn with AI
+                <span className="ml-2">
+                  <FaStar className="text-yellow-400 inline-block mx-2 size-5" />
+                </span>
+              </strong>
+            </a>
           </li>
           <li>
             <Link to="/logout" onClick={handleLogout} className="md:hidden block h-full rounded-lg my-1 border border-gray-700 p-4 hover:border-pink-600">

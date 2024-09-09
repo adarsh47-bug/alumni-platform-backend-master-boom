@@ -49,11 +49,11 @@ const Settings = () => {
     }
   };
 
-  const handleSkillChange = (e, index) => {
-    const updatedSkills = [...profile.skills];
-    updatedSkills[index] = e.target.value;
-    setProfile({ ...profile, skills: updatedSkills });
-  };
+  // const handleSkillChange = (e, index) => {
+  //   const updatedSkills = [...profile.skills];
+  //   updatedSkills[index] = e.target.value;
+  //   setProfile({ ...profile, skills: updatedSkills });
+  // };
 
   const addNewItem = (section) => {
     const newItem = { degree: '', institution: '', year: '', description: '', images: [] };

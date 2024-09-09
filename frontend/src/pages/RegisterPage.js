@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/authContext';
 
@@ -13,7 +13,7 @@ const RegisterPage = () => {
   const [userType, setUserType] = useState('student'); // New state for user type
   const [accessCode, setAccessCode] = useState(''); // New state for access code
   const [error, setError] = useState('');
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { login } = useContext(AuthContext);
 
   const submitHandler = async (e) => {
@@ -25,7 +25,7 @@ const RegisterPage = () => {
     try {
       const { data } = await axios.post('/api/users', { name, email, password, userType, accessCode }); // Include userType and accessCode in the request
       login(data);
-      navigate('/');
+      window.location.href = '/';
     } catch (err) {
       setError('Failed to register');
     }

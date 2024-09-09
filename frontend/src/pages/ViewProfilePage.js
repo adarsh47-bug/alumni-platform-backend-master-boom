@@ -33,20 +33,63 @@ const dummyProfileData = {
     },
   },
   '3': {
-    name: 'Alice Johnson',
-    graduationYear: 2020,
-    degree: 'M.S. in Data Science',
-    currentPosition: 'Data Analyst at Amazon',
-    location: 'Seattle, WA',
-    contact: 'alice.johnson@gmail.com',
+    name: "Emily Johnson",
+    graduationYear: 2017,
+    degree: "MBA in Finance",
+    currentPosition: "Financial Analyst at Goldman Sachs",
+    location: "New York, NY",
+    contact: "emily.johnson@gmail.com",
+    profileImage: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=faces&fit=crop&w=400&h=400",
     bio: 'Experienced marketing manager driving campaigns for global outreach at Facebook. Specializing in digital marketing and consumer behavior.',
-    profileImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=faces&fit=crop&w=400&h=400',
     additionalInfo: {
       Hobbies: 'Photography, Traveling',
       LinkedIn: 'https://linkedin.com/in/janesmith',
     },
   },
+  '4': {
+    name: "Michael Brown",
+    graduationYear: 2018,
+    degree: "BA in Graphic Design",
+    currentPosition: "Creative Director at Adobe",
+    location: "San Francisco, CA",
+    contact: "michael.brown@gmail.com",
+    profileImage: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=faces&fit=crop&w=400&h=400",
+    bio: "Software engineer with a passion for building scalable applications. Experienced in cloud computing and DevOps.",
+    additionalInfo: {
+      Hobbies: "Gaming, Cooking",
+      LinkedIn: "https://linkedin.com/in/michaelbrown"
+    }
+  },
+  '5': {
+    name: "Sophia Davis",
+    graduationYear: 2019,
+    degree: "BSc in Data Science",
+    currentPosition: "Data Scientist at Amazon",
+    location: "Seattle, WA",
+    contact: "sophia.davis@gmail.com",
+    profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=400&h=400",
+    bio: "Data scientist with a focus on machine learning and predictive analytics. Passionate about solving complex business problems with data-driven solutions.",
+    additionalInfo: {
+      Hobbies: "Hiking, Painting",
+      LinkedIn: "https://linkedin.com/in/sophiadavis"
+    }
+  },
+  '6': {
+    name: "William Wilson",
+    graduationYear: 2015,
+    degree: "PhD in Physics",
+    currentPosition: "Research Scientist at NASA",
+    location: "Houston, TX",
+    contact: "will@i.am",
+    profileImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&w=400&h=400",
+    bio: "Research scientist working on space exploration and astrophysics projects at NASA. Specializing in planetary science and space missions.",
+    additionalInfo: {
+      Hobbies: "Stargazing, Chess",
+      LinkedIn: "https://linkedin.com/in/williamwilson"
+    }
+  },
 };
+
 
 
 const ViewProfilePage = () => {

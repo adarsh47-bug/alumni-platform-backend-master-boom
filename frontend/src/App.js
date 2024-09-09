@@ -10,7 +10,8 @@ import EventsPage from './pages/EventsPage';
 import CoursesPage from './pages/CoursesPage';
 import JobsPage from './pages/JobsPage';
 import ProfilePage from './pages/ProfilePage';
-import Header from './components/Header';
+// import Header from './components/Header';
+// import HeaderCopy from './components/HeaderCopy';
 import Footer from './components/Footer';
 import CombinedRoute from './components/CombinedRoute';
 import { AuthProvider } from './context/authContext';
@@ -24,10 +25,15 @@ import EventDetailsPage from './pages/EventDetailsPage';
 import ScrollToTop from './components/ScrollToTop';
 import IntroPage from './pages/IntroPage';
 
+import CareerAssistanceAI from './aimodels/CareerAssistanceAI';
+import LearnWithMeAI from './aimodels/LearnWithMeAI';
+
 const App = () => {
   return (
     <AuthProvider>
-      <Header />
+      {/* <Header /> */}
+      {/* <CombinedRoute element={HeaderCopy} isPrivate={false} />
+      <CombinedRoute element={Header} isPrivate={true} /> */}
       <ScrollToTop />
       <div className="pt-16">
         <Routes>
@@ -50,6 +56,10 @@ const App = () => {
           <Route path="/profile/:userId" element={<CombinedRoute element={ViewProfilePage} isPrivate={true} />} />
           <Route path="/" element={<CombinedRoute element={IntroPage} isPrivate={false} />} />
           <Route path="*" element={<h1>Not Found</h1>} />
+
+          <Route path="/careerai" element={<CombinedRoute element={CareerAssistanceAI} isPrivate={true} />} />
+          <Route path="/learnai" element={<CombinedRoute element={LearnWithMeAI} isPrivate={true} />} />
+
 
         </Routes>
       </div>
